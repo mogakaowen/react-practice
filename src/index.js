@@ -115,14 +115,17 @@ const Book = (props) => {
 // Second BookList Component
 const BookList2 = () => {
   return (
-    <section className="booklist">
-      {/* <EventExample /> */}
-      {newBooks}
-    </section>
+    <>
+      <h1>Amazon Best Sellers</h1>
+      <section className="booklist">
+        {/* <EventExample /> */}
+        {newBooks}
+      </section>
+    </>
   );
 };
 
-const newBooks = books.map((book) => {
+const newBooks = books.map((book, index) => {
   const someValue = "Hello readers, hope you enjoyed this book!";
   const displayValue = () => {
     alert(someValue);
@@ -139,6 +142,7 @@ const newBooks = books.map((book) => {
       key={book.id}
       displayValue={displayValue}
       getBook={getBook}
+      number={index + 1}
     />
   );
 });

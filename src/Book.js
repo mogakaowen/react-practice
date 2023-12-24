@@ -1,5 +1,5 @@
 const Book2 = (props) => {
-  const { img, title, author, displayValue, getBook, id } = props;
+  const { img, title, author, displayValue, getBook, id, number } = props;
   console.log("BookList2 props:", props);
 
   const getSingleBook = () => {
@@ -10,12 +10,13 @@ const Book2 = (props) => {
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
-      <button onClick={displayValue}>Display Value</button>
+      <h4>{author}</h4>
+      <span className="number">{`# ${number}`}</span>
       <div>
+        <button onClick={displayValue}>Display Value</button>
         <button onClick={() => getBook(id)}>Get Book</button>
         {/* <button onClick={getSingleBook}>Get Book</button> */}
       </div>
-      <h4>{author}</h4>
     </article>
   );
 };

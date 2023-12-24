@@ -25,6 +25,7 @@ body {
   padding: 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
+  position: relative;
 }
 
 .book h4 {
@@ -48,6 +49,24 @@ body {
 .book p {
   color: red;
   margin: 1rem 0 0.5rem;
+}
+
+.number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #c35600;
+  color: #fff;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 768px) {
